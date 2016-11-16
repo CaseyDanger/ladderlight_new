@@ -1,0 +1,119 @@
+// Colors
+
+$red: #f7323f;
+$gray: #3e3935;
+$ltgray: #c5c0c3;
+$dkgray: #3c3c3b;
+
+// Typography
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+$lato: 'Lato', sans-serif;
+$light: 300;
+$reg: 400;
+$bold: 700;
+$black: 900;
+
+p {
+	font-family: $lato;
+	font-weight: $reg;
+}
+
+// General
+
+// Borrowed from here https://css-tricks.com/snippets/css/scale-on-hover-with-webkit-transition/
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.05); }
+
+// Body
+
+body {
+	background-color: $dkgray !important;
+}
+
+#container {
+	background-color: $gray;
+	height: 100%;
+	-webkit-box-shadow: 0 0 60px 5px #000;
+	-moz-box-shadow: 0 0 60px 5px #000;
+	box-shadow: 0 0 60px 5px #000;
+}
+
+#header-bar {
+	background-color: $red;
+	border-bottom: 7px solid $gray;
+	height: 25px;
+}
+
+#main-content {
+	background-color: $ltgray;
+	padding-top: 6rem;
+	padding-bottom: 4rem;
+	#logo-text-container {
+		.logo {
+			position: relative;
+			img {
+				position: relative;
+				z-index: 100;
+			}
+			&::after {
+				content: "";
+				box-shadow: 1px 1px 100px 80px rgba(255, 255, 255, 0.5);
+		    width: 100px;
+		    height: 100px;
+		    display: block;
+		    position: absolute;
+		    border-radius: 100%;
+		    background-color: rgba(255, 255, 255, 0.5);
+		    top: 4rem;
+		    z-index: 0;
+		    left: 6.1rem;
+			}
+		}
+		p {
+			font-size: 0.9rem;
+			padding-top: 2rem;
+		}
+		#mobile-video {
+	    padding-top: 2rem;
+	    z-index: 999;
+	    position: relative;
+		}
+	}
+	#video-container {
+		margin-top: 2rem;
+	}
+	.yt-thumb {
+		-webkit-box-shadow: 0 25px 50px -30px #000;
+		-moz-box-shadow: 0 25px 50px -30px #000;
+		box-shadow: 0 25px 50px -30px #000;
+	}
+	a.contact-us.button {
+		background-color: $red;
+		color: #fefefe;
+		font-weight: $black;
+		margin-top: 2rem;
+		&:hover, &:focus {
+			background-color: #da3116;
+			color: #fefefe;
+		}
+	}
+}
+
+// Footer
+
+#footer {
+	background-color: $gray;
+	color: #FFF;
+	p {
+		padding-top: 1rem;
+	}
+}
+
+// Mobile Styles
+
+@media screen and (max-width: 39.9375em) {
+	#main-content {
+		padding-top: 2rem;
+	}
+}
