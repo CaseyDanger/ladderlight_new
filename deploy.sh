@@ -119,6 +119,8 @@ fi
 
 if [ -e "$DEPLOYMENT_SOURCE/gulpfile.babel.js" ]; then
   echo "Running gulp tasks"
+  eval $NPM_CMD install gulp 
+  exitWithMessageOnError "installing gulp failed"  
   cd "$DEPLOYMENT_SOURCE"
   eval ./node_modules/.bin/gulp build --production
   exitWithMessageOnError "gulp failed"
