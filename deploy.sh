@@ -120,7 +120,7 @@ fi
 if [ -e "$DEPLOYMENT_SOURCE/gulpfile.babel.js" ]; then
   echo "Running gulp tasks"
   cd "$DEPLOYMENT_SOURCE"
-  ./node_modules/.bin/gulp build --production
+  eval ./node_modules/.bin/gulp build --production
   exitWithMessageOnError "gulp failed"
   cd - > /dev/null
 fi
