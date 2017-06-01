@@ -92,11 +92,14 @@ body {
 		background-color: $red;
 		color: #fefefe;
 		font-weight: $black;
-		margin-top: 2rem;
 		&:hover, &:focus {
 			background-color: #da3116;
 			color: #fefefe;
 		}
+	}
+	a.buy-now.button {
+		margin-top: 2rem;
+		font-weight: $black;
 	}
 }
 
