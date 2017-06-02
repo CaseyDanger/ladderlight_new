@@ -6,6 +6,7 @@
 @import 'll-styles';
 
 @include foundation-global-styles;
+@include add-foundation-colors;
 // @include foundation-grid;
 @include foundation-flex-grid;
 @include foundation-typography;
